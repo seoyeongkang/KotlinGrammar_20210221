@@ -43,6 +43,9 @@ class MainActivity : AppCompatActivity() {
 //        inputMessage 를 토스트로 출력.
             Toast.makeText(this, inputMessage, Toast.LENGTH_SHORT).show()
 
+//          messageTxt의 문구로 반영.
+            messageTxt.text = inputMessage
+
         }
 
     }
