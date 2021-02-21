@@ -37,16 +37,25 @@ class MainActivity : AppCompatActivity() {
 //        확인 버튼이 눌리면 할일
         okBtn.setOnClickListener {
 
-//      messageEdt에 적혀있는 문구를 가져오자.
-        val inputMessage = messageEdt.text.toString()
+//        messageEdt에 적혀있는 문구를 가져오자.
+            val inputMessage = messageEdt.text.toString()
 
 //        inputMessage 를 토스트로 출력.
             Toast.makeText(this, inputMessage, Toast.LENGTH_SHORT).show()
 
-//          messageTxt의 문구로 반영.
+//        messageTxt의 문구로 반영.
             messageTxt.text = inputMessage
+            
+//        적힌 문구가 "안녕하세요" 라면 => 로그로 "인사문구 입력됨" 출력
+//        그렇지 않다면  => 로그로 "일반문구 입력됨" 출력
 
+            if(inputMessage == "안녕하세요" || inputMessage == "반갑습니다"){
+                Log.d("메인화면", "인사문구 입력됨")
+            }
+            else{
+                Log.d("메인화면","일반문구 입력됨")
+                
+            }
         }
-
     }
 }
