@@ -37,8 +37,11 @@ class MainActivity : AppCompatActivity() {
 //        확인 버튼이 눌리면 할일
         okBtn.setOnClickListener {
 
-//            우선 단순 토스트로 "안녕하세요."출력
-            Toast.makeText(this, "안녕하세요.", Toast.LENGTH_SHORT).show()
+//      messageEdt에 적혀있는 문구를 가져오자.
+        val inputMessage = messageEdt.text.toString()
+
+//        inputMessage 를 토스트로 출력.
+            Toast.makeText(this, inputMessage, Toast.LENGTH_SHORT).show()
 
         }
 
